@@ -1,0 +1,37 @@
+<%= form_for(@photos_group) do |f| %>
+  <% if @photos_group.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@photos_group.errors.count, "error") %> prohibited this photos_group from being saved:</h2>
+
+      <ul>
+      <% @photos_group.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :parent_id %><br />
+    <%= f.number_field :parent_id %>
+  </div>
+  <div class="field">
+    <%= f.label :pic %><br />
+    <%= f.text_field :pic %>
+  </div>
+  <div class="field">
+    <%= f.label :orderby %><br />
+    <%= f.number_field :orderby %>
+  </div>
+  <div class="field">
+    <%= f.label :admin_users_id %><br />
+    <%= f.text_field :admin_users_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

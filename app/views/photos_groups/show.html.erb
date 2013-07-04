@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @photos_group.title %>
+</p>
+
+<p>
+  <b>Parent:</b>
+  <%= @photos_group.parent_id %>
+</p>
+
+<p>
+  <b>Pic:</b>
+  <%= @photos_group.pic %>
+</p>
+
+<p>
+  <b>Orderby:</b>
+  <%= @photos_group.orderby %>
+</p>
+
+<p>
+  <b>Admin users:</b>
+  <%= @photos_group.admin_users_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_photos_group_path(@photos_group) %> |
+<%= link_to 'Back', photos_groups_path %>

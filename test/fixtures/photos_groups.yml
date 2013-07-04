@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  parent_id: 1
+  pic: MyString
+  orderby: 1
+  admin_users_id: 
+
+two:
+  title: MyString
+  parent_id: 1
+  pic: MyString
+  orderby: 1
+  admin_users_id: 

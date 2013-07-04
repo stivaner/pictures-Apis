@@ -1,0 +1,31 @@
+<h1>Listing photos_groups</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Parent</th>
+    <th>Pic</th>
+    <th>Orderby</th>
+    <th>Admin users</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @photos_groups.each do |photos_group| %>
+  <tr>
+    <td><%= photos_group.title %></td>
+    <td><%= photos_group.parent_id %></td>
+    <td><%= photos_group.pic %></td>
+    <td><%= photos_group.orderby %></td>
+    <td><%= photos_group.admin_users_id %></td>
+    <td><%= link_to 'Show', photos_group %></td>
+    <td><%= link_to 'Edit', edit_photos_group_path(photos_group) %></td>
+    <td><%= link_to 'Destroy', photos_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Photos group', new_photos_group_path %>
