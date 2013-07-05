@@ -29,7 +29,7 @@ gem 'jquery-rails', '2.3.0'
 gem 'activeadmin'
 gem 'rmagick'
 gem 'carrierwave'
-gem 'tinymce-rails'
+#gem 'tinymce-rails'
 
 gem "rspec-rails", :group => [:test, :development]
 group :test do
