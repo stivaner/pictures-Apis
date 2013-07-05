@@ -9,6 +9,7 @@ group :development do
   gem 'mysql2'
 end
 group :production do
+  gem 'unicorn'
   gem 'pg'
 end
 
