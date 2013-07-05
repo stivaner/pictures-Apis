@@ -9,7 +9,6 @@ group :development do
   gem 'mysql2'
 end
 group :production do
-  gem 'unicorn'
   gem 'pg'
 end
 
@@ -29,7 +28,7 @@ gem 'jquery-rails', '2.3.0'
 gem 'activeadmin'
 gem 'rmagick'
 gem 'carrierwave'
-#gem 'tinymce-rails'
+gem 'tinymce-rails', :git => 'git://github.com/spohlenz/tinymce-rails.git'
 
 gem "rspec-rails", :group => [:test, :development]
 group :test do
