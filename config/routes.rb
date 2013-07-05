@@ -7,14 +7,14 @@ PicturesApis::Application.routes.draw do
     end
   end
 
-  #match "/admin" => redirect('/')
+  match "/admin" => redirect('/')
 
   resources :photos
   resources :photos_groups
   resources :news
 
-  #devise_for :admin_users, ActiveAdmin::Devise.config
-  #ActiveAdmin.routes(self)
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
