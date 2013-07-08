@@ -28,6 +28,7 @@ gem 'jquery-rails', '2.3.0'
 gem 'activeadmin'
 gem 'rmagick'
 gem 'carrierwave'
+gem "fog", "~> 1.3.1"
 gem 'tinymce-rails', :git => 'git://github.com/spohlenz/tinymce-rails.git'
 
 gem "rspec-rails", :group => [:test, :development]
