@@ -26,18 +26,6 @@ module Api
       def show
         respond_with News.find(params[:id])
       end
-
-      def create
-        respond_with News.create(params[:news])
-      end
-
-      def update
-        respond_with News.update(params[:id], params[:news])
-      end
-
-      def destroy
-        respond_with News.destroy(params[:id])
-      end
     end
   end
 end

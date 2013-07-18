@@ -23,18 +23,6 @@ module Api
       def show
         respond_with PhotosGroup.find(params[:id])
       end
-
-      def create
-        respond_with PhotosGroup.create(params[:photo])
-      end
-
-      def update
-        respond_with PhotosGroup.update(params[:id], params[:photo])
-      end
-
-      def destroy
-        respond_with PhotosGroup.destroy(params[:id])
-      end
     end
   end
 end

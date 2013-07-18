@@ -1,12 +1,14 @@
+require 'spec_helper'
 require 'carrierwave/test/matchers'
 
 describe PicUploader do
   include CarrierWave::Test::Matchers
 
   before do
+    @photo = FactoryGirl.create(:photo)
     PicUploader.enable_processing = true
     @uploader = PicUploader.new(@photo, :pic)
-    @uploader.store!(File.open(path_to_file))
+    @uploader.store!(File.open("#{Rails.root}/public/uploads/darth-vader.jpg"))
   end
 
   after do
@@ -16,13 +18,13 @@ describe PicUploader do
 
   context 'the thumb version' do
     it "should scale down a landscape image to be exactly 64 by 64 pixels" do
-      @uploader.thumb.should have_dimensions(64, 64)
+      @uploader.thumb.should be_no_larger_than(100, 100)
     end
   end
 
-  context 'the small version' do
+  context 'the preview version' do
     it "should scale down a landscape image to fit within 200 by 200 pixels" do
-      @uploader.small.should be_no_larger_than(200, 200)
+      @uploader.preview.should be_no_larger_than(300, 300)
     end
   end
 
