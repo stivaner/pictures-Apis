@@ -32,7 +32,7 @@ ActiveAdmin.register News do
       f.input :link
     end
     f.inputs "Announce" do
-      f.input :announce, :label => '', :input_html => { :class => "tinymce_editor" }
+      f.input :announce, :label => ''
     end
     f.inputs "Body" do
       f.input :body, :label => '', :input_html => { :class => "tinymce_editor" }
